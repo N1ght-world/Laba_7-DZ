@@ -3,7 +3,6 @@
 #include <math.h>
 #include <locale.h>
 
-
 int Task1(char c);
 float calculateExpression(float x, char op, float y);
 void printCurrency(int total_kopecks);
@@ -12,6 +11,7 @@ int main()
 {
     setlocale(LC_ALL, "ru_RU.UTF-8");
 
+    /* --- Task_1 --- */
     char c;
     printf("Введите символ: ");
     scanf(" %c", &c);
@@ -24,7 +24,7 @@ int main()
     default: printf("Неизвестный символ\n"); break;
     }
 
-
+    /* --- Task_2 --- */
     float x, y, result;
     char op;
     printf("\nВведите выражение (например, 5*3): ");
@@ -36,6 +36,7 @@ int main()
         printf("= %.6f\n", result);
     }
 
+    /* --- DZ_Laba_7 --- */
     int total_kopecks;
     printf("\nВведите стоимость покупки в копейках: ");
     scanf("%d", &total_kopecks);
@@ -44,6 +45,7 @@ int main()
     return 0;
 }
 
+/* --- Task_1 --- */
 int Task1(char c)
 {
     switch (c)
@@ -73,6 +75,7 @@ int Task1(char c)
     }
 }
 
+/* --- Task_2 --- */
 float calculateExpression(float x, char op, float y)
 {
     switch (op)
@@ -94,6 +97,7 @@ float calculateExpression(float x, char op, float y)
     }
 }
 
+/* --- DZ_Laba_7 --- */
 void printCurrency(int total_kopecks)
 {
     int rubles = total_kopecks / 100;
